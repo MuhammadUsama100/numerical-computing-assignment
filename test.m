@@ -4,7 +4,9 @@ val1 = input('Type in a value of inital i1: ') ;
 itrations = input('Number of itrations : ') ; 
 
 %bisect(str,val0,val1,itrations)
-secant(str,val0 , val1, itrations)
+%secant(str,val0 , val1, itrations)
+%newtonMethord(str,val0,itrations);
+
 
 %{
 for i = 1:itrations
