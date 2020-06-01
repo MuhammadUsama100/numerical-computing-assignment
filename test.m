@@ -3,7 +3,9 @@ val0 = input('Type in a value of inital i0: ') ;
 val1 = input('Type in a value of inital i1: ') ; 
 itrations = input('Number of itrations : ') ; 
 
-bisect(str,val0,val1,itrations)
+%bisect(str,val0,val1,itrations)
+secant(str,val0 , val1, itrations)
+
 %{
 for i = 1:itrations
     f = inline(str,'x') ;
@@ -27,3 +29,8 @@ end
 %x^3+2*x-2
 %f = inline(str,'x') ;
 %y = feval(f,x) ;
+
+
+
+
+
