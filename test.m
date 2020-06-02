@@ -5,6 +5,7 @@ itrations = input('Number of itrations : ') ;
 
 %bisect(str,val0,val1,itrations)
 %secant(str,val0 , val1, itrations)
+%falsePosition(str,val0 , val1, itrations)
 %newtonMethord(str,val0,itrations);
 
 
