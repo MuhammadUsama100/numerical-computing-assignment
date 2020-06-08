@@ -2,7 +2,8 @@ str = input('Give an equation in x: ','s')  ;
 x0 = input('Type in a value of inital i0: ') ; 
 y0 = input('Type in a value of inital i1: ') ; 
 h =  input('Type in a value of inital h: ') ; 
-realx = input('Type in a value of inital h: ') ; 
+realx = input('Type in a value of inital realx: ') ; 
+numberEPROX = input('Type in a value of inital EPROX: ') ;
 %itrations = input('Number of itrations : ') ; 
 
 %bisect(str,val0,val1,itrations)
@@ -10,5 +11,27 @@ realx = input('Type in a value of inital h: ') ;
 %falsePosition(str,val0 , val1, itrations)
 %newtonMethord(str,val0,itrations);
 %RangKutta4order(str,x0,y0,h,realx);
+%Euler(str,x0,y0,h,realx);
+
+i  = realx -  x0  ;
+
+while i > 0.0001
+   f = str2func(['@(x,y)' str]);
+   y = y0 + h*f(x0,y0)
+   
+   tempx =  x0 + h;
+   tempy =  y ; 
+    for j = 1 : numberEPROX
+        
+        ym  =  y0 + (h/2  *(f(x0,y0) + f(tempx ,tempy)));
+        disp(['y modified  for : [' num2str(ym) ']']) ;
+        tempy =  ym ;
+    end
+   x0 =  x0 + h;
+   y0 = y ;
+   i =  i - h;
+    
+end
+
 
 
